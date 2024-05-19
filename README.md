@@ -1,10 +1,20 @@
 # Abel Jimenez Portfolio 
 
-## Setup 
+## Setup Environment 
 ### Simple Instructions
 1. git clone https://github.com/abeljim/portfolio.git 
 2. devenv shell
 3. Done!
+
+### Complete Instructions 
+1. This was tested on ubuntu 22.04.
+2. Install Nix Package Manager `curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install`
+3. Setup nixpkgs unstable: 
+`nix-channel --add https://nixos.org/channels/nixpkgs-unstable`
+`nix-channel --update`
+4. Setup devenv `nix-env -iA nixpkgs.devenv`
+5. Enter Environment with: `devenv shell`
+6. Optional: Setup direnv for automatic loading of environment. [Instructions](https://direnv.net/docs/installation.html)
 
 ## Commands
 
@@ -47,3 +57,4 @@ require 'lspconfig'.astro.setup {
   cmd = { "npx", "astro-ls", "--stdio"},
 }
 ```
+This will use the astro-ls that is bundled with npm. 
