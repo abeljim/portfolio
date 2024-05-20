@@ -18,6 +18,7 @@
   # https://devenv.sh/tests/
   enterTest = ''
     echo "Running tests"
+    npx astro check
   '';
 
   languages.javascript = {
